@@ -3,16 +3,15 @@ Tests for lqcontrol.py file
 
 """
 import sys
-import unittest
 import numpy as np
 from numpy.testing import assert_allclose
 from numpy import dot
 from quantecon.lqcontrol import LQ, LQMarkov
 
 
-class TestLQControl(unittest.TestCase):
+class TestLQControl:
 
-    def setUp(self):
+    def setup_method(self):
         # Initial Values
         q = 1.
         r = 1.
@@ -91,9 +90,9 @@ class TestLQControl(unittest.TestCase):
             assert_allclose(val_func_lq, val_func_answer, atol=1e-3)
 
 
-class TestLQMarkov(unittest.TestCase):
+class TestLQMarkov:
 
-    def setUp(self):
+    def setup_method(self):
 
         # Markov chain transition matrix
         Π = np.array([[0.8, 0.2],

@@ -2,15 +2,14 @@
 Tests for ecdf.py
 
 """
-import unittest
 import numpy as np
 from quantecon import ECDF
 
 
-class TestECDF(unittest.TestCase):
+class TestECDF:
 
     @classmethod
-    def setUpClass(cls):
+    def setup_methodClass(cls):
         cls.obs = np.random.rand(40)  # observations defining dist
         cls.ecdf = ECDF(cls.obs)
 

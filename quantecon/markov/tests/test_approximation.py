@@ -3,15 +3,14 @@ Tests for approximation.py file (i.e. tauchen)
 
 """
 import sys
-import unittest
 import numpy as np
 from quantecon.markov import tauchen, rouwenhorst
 #from quantecon.markov.approximation import rouwenhorst
 
 
-class TestTauchen(unittest.TestCase):
+class TestTauchen:
 
-    def setUp(self):
+    def setup_method(self):
         self.rho, self.sigma_u = np.random.rand(2)
         self.n = np.random.random_integers(3, 25)
         self.m = np.random.random_integers(4)
@@ -53,9 +52,9 @@ class TestTauchen(unittest.TestCase):
         self.assertTrue(abs(np.sum(self.x)) < self.tol)
 
 
-class TestRouwenhorst(unittest.TestCase):
+class TestRouwenhorst:
 
-    def setUp(self):
+    def setup_method(self):
         self.rho, self.sigma = np.random.uniform(0, 1, size=2)
         self.n = np.random.random_integers(3, 25)
         self.ybar = np.random.random_integers(0, 10)

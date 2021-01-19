@@ -4,8 +4,8 @@ Tests for gridtools.py file
 """
 import numpy as np
 from numpy.testing import assert_array_equal
+import pytest
 from nose.tools import eq_, raises
-from nose.plugins.attrib import attr
 
 from quantecon.gridtools import (
     cartesian, mlinspace, _repeat_1d, simplex_grid, simplex_index,
@@ -53,7 +53,7 @@ def test_cartesian_F_order():
 
     assert(correct)
 
-@attr('slow')
+@pytest.mark.skip(reason="slow")
 def test_performance_C():
 
     from numpy import linspace, column_stack, repeat, tile
@@ -87,7 +87,7 @@ def test_performance_C():
     print("Numpy:     {}".format(t4-t3))
     assert(abs(prod-prod_numpy).max()==0)
 
-@attr('slow')
+@pytest.mark.skip(reason="slow")
 def test_performance_F():
 
     from numpy import linspace, column_stack, repeat, tile
@@ -172,7 +172,7 @@ def test_repeat():
 
 
 class TestSimplexGrid:
-    def setUp(self):
+    def setup_method(self):
         self.simplex_grid_3_4 = np.array([[0, 0, 4],
                                           [0, 1, 3],
                                           [0, 2, 2],

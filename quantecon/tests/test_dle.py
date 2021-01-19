@@ -3,16 +3,15 @@ Tests for dle.py file
 """
 
 import sys
-import unittest
 import numpy as np
 from numpy.testing import assert_allclose
 from quantecon.dle import DLE
 
 ATOL = 1e-10
 
-class TestDLE(unittest.TestCase):
+class TestDLE:
 
-    def setUp(self):
+    def setup_method(self):
         """
         Given LQ control is tested we will test the transformation
         to alter the problem into a form suitable to solve using LQ

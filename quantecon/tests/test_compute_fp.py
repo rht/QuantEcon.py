@@ -9,16 +9,15 @@ https://www.math.ucdavis.edu/~hunter/book/ch3.pdf
 TODO: add multivariate case
 
 """
-import unittest
 import numpy as np
 from nose.tools import ok_, raises
 from quantecon import compute_fixed_point
 
 
-class TestFPLogisticEquation(unittest.TestCase):
+class TestFPLogisticEquation:
 
     @classmethod
-    def setUpClass(cls):
+    def setup_methodClass(cls):
         cls.mu_1 = 0.2  # 0 is unique fixed point forall x_0 \in [0, 1]
 
         # (4mu - 1)/(4mu) is a fixed point forall x_0 \in [0, 1]
@@ -91,7 +90,7 @@ class TestFPLogisticEquation(unittest.TestCase):
 
 
 class TestComputeFPContraction():
-    def setUp(self):
+    def setup_method(self):
         self.coeff = 0.5
         self.methods = ['iteration', 'imitation_game']
 
