@@ -39,7 +39,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -U pytest pytest-cov nose numpy scipy pandas numba sympy ipython statsmodels flake8
         pip install tables
-        python setup.py install
+        pip install -e .
     - name: Run Tests
       run: |
         flake8 --select F401, F405,E231 quantecon
