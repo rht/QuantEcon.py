@@ -5,7 +5,7 @@ Tests for discrete_rv.py
 import unittest
 import numpy as np
 from numpy.testing import assert_allclose
-from nose.plugins.attrib import attr
+import pytest
 from quantecon import DiscreteRV
 
 
@@ -42,7 +42,7 @@ class TestDiscreteRV(unittest.TestCase):
         "discrete_rv: Q sums to 1"
         assert (self.drv.Q[-1] - 1.0 < 1e-10)
 
-    @attr("slow")
+    @pytest.mark.skip(reason="slow")
     def test_draw_lln(self):
         "discrete_rv: lln satisfied?"
         draws = self.drv.draw(1000000)
