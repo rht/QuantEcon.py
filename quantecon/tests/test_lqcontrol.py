@@ -12,7 +12,7 @@ from quantecon.lqcontrol import LQ, LQMarkov
 
 class TestLQControl(unittest.TestCase):
 
-    def setUp(self):
+    def setup_method(self):
         # Initial Values
         q = 1.
         r = 1.
@@ -93,7 +93,7 @@ class TestLQControl(unittest.TestCase):
 
 class TestLQMarkov(unittest.TestCase):
 
-    def setUp(self):
+    def setup_method(self):
 
         # Markov chain transition matrix
         Π = np.array([[0.8, 0.2],

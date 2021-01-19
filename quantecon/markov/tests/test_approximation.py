@@ -11,7 +11,7 @@ from quantecon.markov import tauchen, rouwenhorst
 
 class TestTauchen(unittest.TestCase):
 
-    def setUp(self):
+    def setup_method(self):
         self.rho, self.sigma_u = np.random.rand(2)
         self.n = np.random.random_integers(3, 25)
         self.m = np.random.random_integers(4)
@@ -55,7 +55,7 @@ class TestTauchen(unittest.TestCase):
 
 class TestRouwenhorst(unittest.TestCase):
 
-    def setUp(self):
+    def setup_method(self):
         self.rho, self.sigma = np.random.uniform(0, 1, size=2)
         self.n = np.random.random_integers(3, 25)
         self.ybar = np.random.random_integers(0, 10)

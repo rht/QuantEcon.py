@@ -12,7 +12,7 @@ ATOL = 1e-10
 
 class TestDLE(unittest.TestCase):
 
-    def setUp(self):
+    def setup_method(self):
         """
         Given LQ control is tested we will test the transformation
         to alter the problem into a form suitable to solve using LQ

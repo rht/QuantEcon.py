@@ -12,7 +12,7 @@ from quantecon.robustlq import RBLQ
 
 class TestRBLQControl(unittest.TestCase):
 
-    def setUp(self):
+    def setup_method(self):
         # Initial Values
         a_0     = 100
         a_1     = 0.5

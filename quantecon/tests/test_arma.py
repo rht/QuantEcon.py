@@ -11,7 +11,7 @@ from quantecon.arma import ARMA
 
 
 class TestARMA(unittest.TestCase):
-    def setUp(self):
+    def setup_method(self):
         # Initial Values
         phi = np.array([.95, -.4, -.4])
         theta = np.zeros(3)

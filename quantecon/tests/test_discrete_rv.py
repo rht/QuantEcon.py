@@ -12,7 +12,7 @@ from quantecon import DiscreteRV
 class TestDiscreteRV(unittest.TestCase):
 
     @classmethod
-    def setUpClass(cls):
+    def setup_methodClass(cls):
         x = np.random.rand(10)
         x /= x.sum()
         # make sure it sums to 1

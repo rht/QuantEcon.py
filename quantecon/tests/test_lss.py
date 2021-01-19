@@ -12,7 +12,7 @@ from nose.tools import raises
 
 class TestLinearStateSpace(unittest.TestCase):
 
-    def setUp(self):
+    def setup_method(self):
         # Initial Values
         A = .95
         C = .05
