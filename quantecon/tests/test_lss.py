@@ -3,14 +3,13 @@ Tests for lss.py
 
 """
 import sys
-import unittest
 import numpy as np
 from numpy.testing import assert_allclose
 from quantecon.lss import LinearStateSpace
 from nose.tools import raises
 
 
-class TestLinearStateSpace(unittest.TestCase):
+class TestLinearStateSpace:
 
     def setup_method(self):
         # Initial Values

@@ -3,14 +3,13 @@ Tests for dle.py file
 """
 
 import sys
-import unittest
 import numpy as np
 from numpy.testing import assert_allclose
 from quantecon.dle import DLE
 
 ATOL = 1e-10
 
-class TestDLE(unittest.TestCase):
+class TestDLE:
 
     def setup_method(self):
         """

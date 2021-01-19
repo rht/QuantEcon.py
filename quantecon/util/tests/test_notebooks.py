@@ -8,7 +8,6 @@ fetch_nb_dependencies
 """
 
 from quantecon.util import fetch_nb_dependencies
-import unittest
 import os
 
 FILES = ['test_file.md']
@@ -17,7 +16,7 @@ RAW = "raw"
 BRANCH = "master"
 FOLDER = "quantecon/util/tests/"
 
-class TestNotebookUtils(unittest.TestCase):
+class TestNotebookUtils:
 
     def test_fetch_nb_dependencies(self):
         """

@@ -2,14 +2,13 @@
 Tests for discrete_rv.py
 
 """
-import unittest
 import numpy as np
 from numpy.testing import assert_allclose
 import pytest
 from quantecon import DiscreteRV
 
 
-class TestDiscreteRV(unittest.TestCase):
+class TestDiscreteRV:
 
     @classmethod
     def setup_methodClass(cls):

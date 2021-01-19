@@ -4,7 +4,6 @@ Tests for estspec.py
 TODO: write tests that check accuracy of returns
 
 """
-import unittest
 import numpy as np
 from quantecon import smooth, periodogram, ar_periodogram
 from quantecon.tests.util import capture
@@ -14,7 +13,7 @@ x_20 = np.random.rand(20)
 x_21 = np.random.rand(21)
 
 
-class PeriodogramBase(unittest.TestCase):
+class PeriodogramBase:
 
     @classmethod
     def setup_methodClass(cls):
@@ -76,7 +75,7 @@ class TestArPeriodogram(PeriodogramBase):
         self.assertEqual(self.Iw_20.size, x_20.size // 2)
 
 
-class TestSmooth(unittest.TestCase):
+class TestSmooth:
 
     @classmethod
     def setup_methodClass(cls):

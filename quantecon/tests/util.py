@@ -28,7 +28,7 @@ def capture(command, *args, **kwargs):
 
     Examples
     --------
-    class FooTest(unittest.TestCase):
+    class FooTest:
         def test_printed_msg(self):
             with capture(func, *args, **kwargs) as output:
                 self.assertRegexpMatches(output, 'should be in print msg')

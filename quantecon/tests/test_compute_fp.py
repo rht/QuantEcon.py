@@ -9,13 +9,12 @@ https://www.math.ucdavis.edu/~hunter/book/ch3.pdf
 TODO: add multivariate case
 
 """
-import unittest
 import numpy as np
 from nose.tools import ok_, raises
 from quantecon import compute_fixed_point
 
 
-class TestFPLogisticEquation(unittest.TestCase):
+class TestFPLogisticEquation:
 
     @classmethod
     def setup_methodClass(cls):

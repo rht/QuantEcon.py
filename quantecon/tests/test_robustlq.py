@@ -3,14 +3,13 @@ Tests for robustlq.py
 
 """
 import sys
-import unittest
 import numpy as np
 from numpy.testing import assert_allclose
 from quantecon.lqcontrol import LQ
 from quantecon.robustlq import RBLQ
 
 
-class TestRBLQControl(unittest.TestCase):
+class TestRBLQControl:
 
     def setup_method(self):
         # Initial Values

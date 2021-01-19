@@ -3,14 +3,13 @@ Tests for lqnash.py
 
 """
 import sys
-import unittest
 import numpy as np
 from numpy.testing import assert_allclose
 from quantecon.lqnash import nnash
 from quantecon.lqcontrol import LQ
 
 
-class TestLQNash(unittest.TestCase):
+class TestLQNash:
     def test_noninteractive(self):
         "Test case for when agents don't interact with each other"
         # Copied these values from test_lqcontrol

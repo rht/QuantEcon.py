@@ -11,7 +11,6 @@ a section of comments.
 
 """
 import os
-import unittest
 from scipy.io import loadmat
 import numpy as np
 from numpy.testing import assert_allclose
@@ -85,7 +84,7 @@ mu_3d = data['mu_3d']
 sigma2_3d = data['sigma2_3d']
 
 
-class TestQuadrect(unittest.TestCase):
+class TestQuadrect:
 
     @classmethod
     def setup_methodClass(cls):
@@ -227,7 +226,7 @@ class TestQuadrect(unittest.TestCase):
         assert_allclose(self.data2d2['H'], self.ml_data2d2['H'])
 
 
-class TestQnwcheb(unittest.TestCase):
+class TestQnwcheb:
 
     @classmethod
     def setup_methodClass(cls):
@@ -247,7 +246,7 @@ class TestQnwcheb(unittest.TestCase):
         assert_allclose(self.w_cheb_3, data['w_cheb_3'])
 
 
-class TestQnwequiN(unittest.TestCase):
+class TestQnwequiN:
 
     @classmethod
     def setup_methodClass(cls):
@@ -267,7 +266,7 @@ class TestQnwequiN(unittest.TestCase):
         assert_allclose(self.w_equiN_3, data['w_equiN_3'])
 
 
-class TestQnwequiW(unittest.TestCase):
+class TestQnwequiW:
 
     @classmethod
     def setup_methodClass(cls):
@@ -287,7 +286,7 @@ class TestQnwequiW(unittest.TestCase):
         assert_allclose(self.w_equiW_3, data['w_equiW_3'])
 
 
-class TestQnwequiH(unittest.TestCase):
+class TestQnwequiH:
 
     @classmethod
     def setup_methodClass(cls):
@@ -307,7 +306,7 @@ class TestQnwequiH(unittest.TestCase):
         assert_allclose(self.w_equiH_3, data['w_equiH_3'])
 
 
-class TestQnwequiR(unittest.TestCase):
+class TestQnwequiR:
 
     @classmethod
     def setup_methodClass(cls):
@@ -344,7 +343,7 @@ class TestQnwequiR(unittest.TestCase):
         assert_allclose(self.w_equiR_3, data['w_equiR_3'])
 
 
-class TestQnwlege(unittest.TestCase):
+class TestQnwlege:
 
     @classmethod
     def setup_methodClass(cls):
@@ -364,7 +363,7 @@ class TestQnwlege(unittest.TestCase):
         assert_allclose(self.w_lege_3, data['w_lege_3'])
 
 
-class TestQnwnorm(unittest.TestCase):
+class TestQnwnorm:
 
     @classmethod
     def setup_methodClass(cls):
@@ -384,7 +383,7 @@ class TestQnwnorm(unittest.TestCase):
         assert_allclose(self.w_norm_3, data['w_norm_3'])
 
 
-class TestQnwlogn(unittest.TestCase):
+class TestQnwlogn:
 
     @classmethod
     def setup_methodClass(cls):
@@ -404,7 +403,7 @@ class TestQnwlogn(unittest.TestCase):
         assert_allclose(self.w_logn_3, data['w_logn_3'])
 
 
-class TestQnwsimp(unittest.TestCase):
+class TestQnwsimp:
 
     @classmethod
     def setup_methodClass(cls):
@@ -424,7 +423,7 @@ class TestQnwsimp(unittest.TestCase):
         assert_allclose(self.w_simp_3, data['w_simp_3'])
 
 
-class TestQnwtrap(unittest.TestCase):
+class TestQnwtrap:
 
     @classmethod
     def setup_methodClass(cls):
@@ -444,7 +443,7 @@ class TestQnwtrap(unittest.TestCase):
         assert_allclose(self.w_trap_3, data['w_trap_3'])
 
 
-class TestQnwunif(unittest.TestCase):
+class TestQnwunif:
 
     @classmethod
     def setup_methodClass(cls):
@@ -464,7 +463,7 @@ class TestQnwunif(unittest.TestCase):
         assert_allclose(self.w_unif_3, data['w_unif_3'])
 
 
-class TestQnwbeta(unittest.TestCase):
+class TestQnwbeta:
 
     @classmethod
     def setup_methodClass(cls):
@@ -484,7 +483,7 @@ class TestQnwbeta(unittest.TestCase):
         assert_allclose(self.w_beta_3, data['w_beta_3'])
 
 
-class TestQnwgamm(unittest.TestCase):
+class TestQnwgamm:
 
     @classmethod
     def setup_methodClass(cls):

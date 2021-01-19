@@ -4,13 +4,12 @@ covered by the numpy tests since we rely on much of their code.
 
 """
 import sys
-import unittest
 import numpy as np
 from numpy.testing import assert_array_equal
 from quantecon.arma import ARMA
 
 
-class TestARMA(unittest.TestCase):
+class TestARMA:
     def setup_method(self):
         # Initial Values
         phi = np.array([.95, -.4, -.4])
